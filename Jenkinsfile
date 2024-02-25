@@ -23,7 +23,8 @@ pipeline {
 
         stage('Setup Python') {
             steps {
-                sh "python -m venv ${VENV}"
+                sh 'apt-get update && apt-get install -y python3 python3-venv'
+                sh "python3 -m venv ${VENV}"
             }
         }
 
