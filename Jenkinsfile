@@ -20,7 +20,6 @@ pipeline {
 
         stage('Setup Python') {
             steps {
-                sh "pyenv local ${PYTHON_VERSION}"
                 sh "python -m venv ${VENV}"
             }
         }
