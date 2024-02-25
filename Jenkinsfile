@@ -33,7 +33,7 @@ pipeline {
         //     steps {
         //         sh "${VENV}/bin/pip install -r requirements.txt"
         //     }
-        }
+        // }
 
         // stage('Run Tests') {
         //     steps {
