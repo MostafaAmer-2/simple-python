@@ -24,7 +24,7 @@ pipeline {
         stage('Install Python') {
             steps {
                 script {
-                    sh "apk add --no-cache python3 py3-pip"
+                    sh "yum install -y python3 python3-venv python3-pip"
                 }
             }
         }
