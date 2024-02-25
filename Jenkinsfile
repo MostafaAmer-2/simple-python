@@ -1,8 +1,7 @@
 pipeline {
     agent {
-        kubernetes {
-            cloud 'kubernetes-production'
-            inheritFrom 'ci-v2'
+       docker {
+            image 'python:3.8'
         }
     }
 
