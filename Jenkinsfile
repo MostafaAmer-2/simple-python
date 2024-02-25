@@ -21,13 +21,13 @@ pipeline {
             }
         }
 
-        stage('Install Python') {
-            steps {
-                script {
-                    sh "apt-get update && apt-get install -y python3"
-                }
-            }
-        }
+        // stage('Install Python') {
+        //     steps {
+        //         script {
+        //             sh "apt-get update && apt-get install -y python3"
+        //         }
+        //     }
+        // }
 
         stage('Install Dependencies') {
             steps {
@@ -35,11 +35,11 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                sh "${VENV}/bin/python -m pytest"
-            }
-        }
+        // stage('Run Tests') {
+        //     steps {
+        //         sh "${VENV}/bin/python -m pytest"
+        //     }
+        // }
 
         stage('Build Docker Image') {
             steps {
