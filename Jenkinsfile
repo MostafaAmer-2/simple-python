@@ -1,8 +1,8 @@
 pipeline {
     agent {
         kubernetes {
-            cloud 'kubernetes-automation'
-            inheritFrom 'automation-cd-v2'
+            cloud 'kubernetes-production'
+            inheritFrom 'ci-v2'
         }
     }
 
