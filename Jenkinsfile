@@ -24,7 +24,7 @@ pipeline {
         stage('Install Python') {
             steps {
                 script {
-                    sh "apk add --no-cache python3"
+                    sh "apt-get update && apt-get install -y python3"
                 }
             }
         }
