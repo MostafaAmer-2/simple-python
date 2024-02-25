@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        kubernetes {
+            cloud 'kubernetes-automation'
+            inheritFrom 'automation-cd-v2'
+        }
+    }
 
     environment {
         PYTHON_VERSION = '3.8'
