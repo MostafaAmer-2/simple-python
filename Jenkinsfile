@@ -29,10 +29,10 @@ pipeline {
         //     }
         // }
 
-        stage('Install Dependencies') {
-            steps {
-                sh "${VENV}/bin/pip install -r requirements.txt"
-            }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         sh "${VENV}/bin/pip install -r requirements.txt"
+        //     }
         }
 
         // stage('Run Tests') {
