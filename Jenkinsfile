@@ -1,7 +1,8 @@
 pipeline {
     agent {
-       docker {
-            image 'python:3.8'
+        kubernetes {
+            cloud 'kubernetes-production'
+            inheritFrom 'ci-v2'
         }
     }
 
@@ -20,10 +21,11 @@ pipeline {
             }
         }
 
-        stage('Setup Python') {
+        stage('Install Python') {
             steps {
-                sh 'apt-get update && apt-get install -y python3 python3-venv'
-                sh "python3 -m venv ${VENV}"
+                script {
+                    sh "apk add --no-cache python3 py3-pip"
+                }
             }
         }
 
