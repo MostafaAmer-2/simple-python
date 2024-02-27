@@ -1,7 +1,6 @@
-from app import app
+from app import index
 
-def test_hello():
-    client = app.test_client()
-    response = client.get('/')
-    assert response.status_code == 200
-    assert b'Hello, World!' in response.data
+
+def test_index():
+    assert index() == "Hello, world!"
+
